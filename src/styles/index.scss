@@ -1,5 +1,17 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
+
+li:hover > i,
+li > i:hover {
+    visibility: visible;
+}
+li:hover{
+    background-color: lighten(gray, 30%);
+}
+li > i{
+    visibility: hidden;
+}
+
 /* 
 
     You can write your own styles here...

@@ -1,0 +1,3 @@
+[submodule "exercise-todo-list"]
+	path = exercise-todo-list
+	url = https://github.com/breatheco-de/exercise-todo-list
