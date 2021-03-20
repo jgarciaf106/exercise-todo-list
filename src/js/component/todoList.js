@@ -22,7 +22,7 @@ export function Todo() {
 	};
 	// remove to do
 	const removeDo = toRemove => {
-		const updatedArray = toDo.filter(item => item.toString() !== toRemove);
+		const updatedArray = toDo.filter((item, index) => index !== toRemove);
 		setToDo(updatedArray);
 	};
 
@@ -35,14 +35,12 @@ export function Todo() {
 					placeholder="Enter to do..."
 					onKeyDown={newDo}
 				/>
-				{toDo.map(doItem => (
-					<li
-						key={doItem.toString()}
-						className="list-group-item text-left">
+				{toDo.map((doItem, index) => (
+					<li key={index} className="list-group-item text-left">
 						{doItem}
 						<i
 							className="fas fa-trash-alt pl-5"
-							onClick={() => removeDo(doItem.toString())}></i>
+							onClick={() => removeDo(index)}></i>
 					</li>
 				))}
 			</ul>
